@@ -1,0 +1,8 @@
+day_name,day_korean,avg_sales,is_weekend
+Monday,월,345.7856258440843,False
+Tuesday,화,318.04130855013995,False
+Wednesday,수,331.70132969084517,False
+Thursday,목,282.67066762486655,False
+Friday,금,324.0710023960284,False
+Saturday,토,432.8342090233131,True
+Sunday,일,462.46109634464227,True
