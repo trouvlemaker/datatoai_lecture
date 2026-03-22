@@ -26,6 +26,23 @@ DUCKDB_PATH = './data/sales_analysis_v2.db'
 
 llm = ChatOpenAI(model='gpt-4o-mini', temperature=0)
 
+from langchain_core.tools import tool
+
+@tool
+def tool_search_md(question: str) -> str:
+    """분석 설명, 전략, 인사이트 등 정성적 답변이 필요할 때 MD 문서를 검색합니다."""
+    result = search_md(question)
+    return result['context']
+
+@tool
+def tool_search_csv(question: str) -> str:
+    """숫자, 통계, 비교, 순위, 합계 등 정량적 데이터가 필요할 때 SQL로 검색합니다."""
+    result = search_csv(question)
+    return result['summary']
+
+tools = [tool_search_md, tool_search_csv]
+llm_with_tools = llm.bind_tools(tools)
+
 # --- DB 로드 ---
 @st.cache_resource
 def load_duckdb():
@@ -78,22 +95,12 @@ def search_csv(question):
         return {'type': 'csv', 'sql': '', 'rows': [], 'summary': f'SQL 실행 실패: {str(e)}'}
 
 def route_question(question):
-    q = question.lower()
-    csv_kw = ['얼마', '몇', 'top', '평균', '합계', '최대', '최소', '순위', '건수', '개수', '비율']
-    md_kw = ['왜', '전략', '어떻게', '이유', '설명', '분석', '인사이트', '권장', '추천', '의미']
-    csv_s = sum(1 for kw in csv_kw if kw in q)
-    md_s = sum(1 for kw in md_kw if kw in q)
-    if csv_s > 0 and md_s == 0:
-        return {'route': 'csv', 'confidence': 0.9, 'reason': f'룰: CSV 키워드 {csv_s}개'}
-    if md_s > 0 and csv_s == 0:
-        return {'route': 'md', 'confidence': 0.9, 'reason': f'룰: MD 키워드 {md_s}개'}
-    router_prompt = ChatPromptTemplate.from_messages([
-        ('system', '질문을 csv, md, clarify 중 하나로 분류하세요. 하나만 출력.'),
-        ('human', '{question}')
-    ])
-    result = llm.invoke(router_prompt.format_messages(question=question)).content.strip().lower()
-    route = result if result in ['csv', 'md', 'clarify'] else 'md'
-    return {'route': route, 'confidence': 0.7, 'reason': f'LLM: {result}'}
+    response = llm_with_tools.invoke(question)
+    if response.tool_calls:
+        tc = response.tool_calls[0]
+        route = 'csv' if 'csv' in tc['name'] else 'md'
+        return {'route': route, 'confidence': 0.9, 'reason': f'Tool Call: {tc["name"]}'}
+    return {'route': 'md', 'confidence': 0.5, 'reason': 'Tool Call 없음 → 기본 md'}
 
 def generate_final(question, search_results):
     context_parts = []
@@ -131,17 +138,34 @@ def ask_langgraph(question):
     return out
 
 def ask_react(question):
-    routing = route_question(question)
-    if routing['route'] == 'clarify':
-        return {'needs_clarify': True, 'clarify_question': '추가로 어떤 정보가 필요한지 알려주세요.', 'route': 'clarify'}
-    if routing['route'] == 'csv':
-        result = search_csv(question)
-    else:
-        result = search_md(question)
-    out = generate_final(question, [result])
-    out['route'] = routing['route']
-    out['needs_clarify'] = False
-    return out
+    # 1단계: 질문 구체성 판단
+    check_msg = [
+        ('system',
+         '사용자의 질문이 데이터 분석 도구를 호출할 만큼 구체적인지 판단하세요.\n'
+         '구체적인 질문 예시: "연도별 매출 합계는?", "카테고리별 매출 비교해줘", "프로모션 전략을 추천해줘"\n'
+         '모호한 질문 예시: "매출 분석해줘", "데이터 좀 봐줘", "분석해줘"\n\n'
+         '구체적이면: SPECIFIC\n'
+         '모호하면: VAGUE: (사용자에게 할 재질문)'),
+        ('human', question)
+    ]
+    check = llm.invoke(check_msg).content.strip()
+    if check.startswith('VAGUE'):
+        clarify_text = check.split(':', 1)[-1].strip() if ':' in check else '좀 더 구체적으로 질문해 주세요.'
+        return {'needs_clarify': True, 'clarify_question': clarify_text, 'route': 'clarify'}
+
+    # 2단계: Tool Calling
+    response = llm_with_tools.invoke(question)
+    if response.tool_calls:
+        tc = response.tool_calls[0]
+        if 'csv' in tc['name']:
+            result = search_csv(tc['args'].get('question', question))
+        else:
+            result = search_md(tc['args'].get('question', question))
+        out = generate_final(question, [result])
+        out['route'] = 'csv' if 'csv' in tc['name'] else 'md'
+        out['needs_clarify'] = False
+        return out
+    return {'needs_clarify': True, 'clarify_question': response.content or '추가 정보가 필요합니다.', 'route': 'clarify'}
 
 def ask_react_with_clarify(original_q, user_response):
     rewrite_prompt = ChatPromptTemplate.from_messages([

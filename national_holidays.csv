@@ -1,0 +1,164 @@
+date,type,locale_name,description
+2012-08-10,Holiday,Ecuador,Primer Grito de Independencia
+2012-10-09,Holiday,Ecuador,Independencia de Guayaquil
+2012-10-12,Transfer,Ecuador,Traslado Independencia de Guayaquil
+2012-11-02,Holiday,Ecuador,Dia de Difuntos
+2012-11-03,Holiday,Ecuador,Independencia de Cuenca
+2012-12-21,Additional,Ecuador,Navidad-4
+2012-12-22,Additional,Ecuador,Navidad-3
+2012-12-23,Additional,Ecuador,Navidad-2
+2012-12-24,Bridge,Ecuador,Puente Navidad
+2012-12-24,Additional,Ecuador,Navidad-1
+2012-12-25,Holiday,Ecuador,Navidad
+2012-12-26,Additional,Ecuador,Navidad+1
+2012-12-31,Bridge,Ecuador,Puente Primer dia del ano
+2012-12-31,Additional,Ecuador,Primer dia del ano-1
+2013-01-01,Holiday,Ecuador,Primer dia del ano
+2013-01-05,Work Day,Ecuador,Recupero puente Navidad
+2013-01-12,Work Day,Ecuador,Recupero puente primer dia del ano
+2013-02-11,Holiday,Ecuador,Carnaval
+2013-02-12,Holiday,Ecuador,Carnaval
+2013-04-29,Holiday,Ecuador,Viernes Santo
+2013-05-01,Holiday,Ecuador,Dia del Trabajo
+2013-05-11,Additional,Ecuador,Dia de la Madre-1
+2013-05-12,Event,Ecuador,Dia de la Madre
+2013-05-24,Holiday,Ecuador,Batalla de Pichincha
+2013-08-10,Holiday,Ecuador,Primer Grito de Independencia
+2013-10-09,Holiday,Ecuador,Independencia de Guayaquil
+2013-10-11,Transfer,Ecuador,Traslado Independencia de Guayaquil
+2013-11-02,Holiday,Ecuador,Dia de Difuntos
+2013-11-03,Holiday,Ecuador,Independencia de Cuenca
+2013-12-21,Additional,Ecuador,Navidad-4
+2013-12-22,Additional,Ecuador,Navidad-3
+2013-12-23,Additional,Ecuador,Navidad-2
+2013-12-24,Additional,Ecuador,Navidad-1
+2013-12-25,Holiday,Ecuador,Navidad
+2013-12-26,Additional,Ecuador,Navidad+1
+2013-12-31,Additional,Ecuador,Primer dia del ano-1
+2014-01-01,Holiday,Ecuador,Primer dia del ano
+2014-03-03,Holiday,Ecuador,Carnaval
+2014-03-04,Holiday,Ecuador,Carnaval
+2014-04-18,Holiday,Ecuador,Viernes Santo
+2014-05-01,Holiday,Ecuador,Dia del Trabajo
+2014-05-10,Additional,Ecuador,Dia de la Madre-1
+2014-05-11,Event,Ecuador,Dia de la Madre
+2014-05-24,Holiday,Ecuador,Batalla de Pichincha
+2014-06-12,Event,Ecuador,Inauguracion Mundial de futbol Brasil
+2014-06-15,Event,Ecuador,Mundial de futbol Brasil: Ecuador-Suiza
+2014-06-20,Event,Ecuador,Mundial de futbol Brasil: Ecuador-Honduras
+2014-06-25,Event,Ecuador,Mundial de futbol Brasil: Ecuador-Francia
+2014-06-28,Event,Ecuador,Mundial de futbol Brasil: Octavos de Final
+2014-06-29,Event,Ecuador,Mundial de futbol Brasil: Octavos de Final
+2014-06-30,Event,Ecuador,Mundial de futbol Brasil: Octavos de Final
+2014-07-01,Event,Ecuador,Mundial de futbol Brasil: Octavos de Final
+2014-07-04,Event,Ecuador,Mundial de futbol Brasil: Cuartos de Final
+2014-07-05,Event,Ecuador,Mundial de futbol Brasil: Cuartos de Final
+2014-07-08,Event,Ecuador,Mundial de futbol Brasil: Semifinales
+2014-07-09,Event,Ecuador,Mundial de futbol Brasil: Semifinales
+2014-07-12,Event,Ecuador,Mundial de futbol Brasil: Tercer y cuarto lugar
+2014-07-13,Event,Ecuador,Mundial de futbol Brasil: Final
+2014-08-10,Holiday,Ecuador,Primer Grito de Independencia
+2014-10-09,Holiday,Ecuador,Independencia de Guayaquil
+2014-10-10,Transfer,Ecuador,Traslado Independencia de Guayaquil
+2014-11-02,Holiday,Ecuador,Dia de Difuntos
+2014-11-03,Holiday,Ecuador,Independencia de Cuenca
+2014-11-28,Event,Ecuador,Black Friday
+2014-12-01,Event,Ecuador,Cyber Monday
+2014-12-20,Work Day,Ecuador,Recupero Puente Navidad
+2014-12-21,Additional,Ecuador,Navidad-4
+2014-12-22,Additional,Ecuador,Navidad-3
+2014-12-23,Additional,Ecuador,Navidad-2
+2014-12-24,Additional,Ecuador,Navidad-1
+2014-12-25,Holiday,Ecuador,Navidad
+2014-12-26,Bridge,Ecuador,Puente Navidad
+2014-12-26,Additional,Ecuador,Navidad+1
+2014-12-31,Additional,Ecuador,Primer dia del ano-1
+2015-01-01,Holiday,Ecuador,Primer dia del ano
+2015-01-02,Bridge,Ecuador,Puente Primer dia del ano
+2015-01-10,Work Day,Ecuador,Recupero Puente Primer dia del ano
+2015-02-16,Holiday,Ecuador,Carnaval
+2015-02-17,Holiday,Ecuador,Carnaval
+2015-04-03,Holiday,Ecuador,Viernes Santo
+2015-05-01,Holiday,Ecuador,Dia del Trabajo
+2015-05-09,Additional,Ecuador,Dia de la Madre-1
+2015-05-10,Event,Ecuador,Dia de la Madre
+2015-05-24,Holiday,Ecuador,Batalla de Pichincha
+2015-08-10,Holiday,Ecuador,Primer Grito de Independencia
+2015-10-09,Holiday,Ecuador,Independencia de Guayaquil
+2015-11-02,Holiday,Ecuador,Dia de Difuntos
+2015-11-03,Holiday,Ecuador,Independencia de Cuenca
+2015-11-27,Event,Ecuador,Black Friday
+2015-11-30,Event,Ecuador,Cyber Monday
+2015-12-21,Additional,Ecuador,Navidad-4
+2015-12-22,Additional,Ecuador,Navidad-3
+2015-12-23,Additional,Ecuador,Navidad-2
+2015-12-24,Additional,Ecuador,Navidad-1
+2015-12-25,Holiday,Ecuador,Navidad
+2015-12-26,Additional,Ecuador,Navidad+1
+2015-12-31,Additional,Ecuador,Primer dia del ano-1
+2016-01-01,Holiday,Ecuador,Primer dia del ano
+2016-02-08,Holiday,Ecuador,Carnaval
+2016-02-09,Holiday,Ecuador,Carnaval
+2016-03-25,Holiday,Ecuador,Viernes Santo
+2016-04-16,Event,Ecuador,Terremoto Manabi
+2016-04-17,Event,Ecuador,Terremoto Manabi+1
+2016-04-18,Event,Ecuador,Terremoto Manabi+2
+2016-04-19,Event,Ecuador,Terremoto Manabi+3
+2016-04-20,Event,Ecuador,Terremoto Manabi+4
+2016-04-21,Event,Ecuador,Terremoto Manabi+5
+2016-04-22,Event,Ecuador,Terremoto Manabi+6
+2016-04-23,Event,Ecuador,Terremoto Manabi+7
+2016-04-24,Event,Ecuador,Terremoto Manabi+8
+2016-04-25,Event,Ecuador,Terremoto Manabi+9
+2016-04-26,Event,Ecuador,Terremoto Manabi+10
+2016-04-27,Event,Ecuador,Terremoto Manabi+11
+2016-04-28,Event,Ecuador,Terremoto Manabi+12
+2016-04-29,Event,Ecuador,Terremoto Manabi+13
+2016-04-30,Event,Ecuador,Terremoto Manabi+14
+2016-05-01,Holiday,Ecuador,Dia del Trabajo
+2016-05-01,Event,Ecuador,Terremoto Manabi+15
+2016-05-02,Event,Ecuador,Terremoto Manabi+16
+2016-05-03,Event,Ecuador,Terremoto Manabi+17
+2016-05-04,Event,Ecuador,Terremoto Manabi+18
+2016-05-05,Event,Ecuador,Terremoto Manabi+19
+2016-05-06,Event,Ecuador,Terremoto Manabi+20
+2016-05-07,Additional,Ecuador,Dia de la Madre-1
+2016-05-07,Event,Ecuador,Terremoto Manabi+21
+2016-05-08,Event,Ecuador,Terremoto Manabi+22
+2016-05-08,Event,Ecuador,Dia de la Madre
+2016-05-09,Event,Ecuador,Terremoto Manabi+23
+2016-05-10,Event,Ecuador,Terremoto Manabi+24
+2016-05-11,Event,Ecuador,Terremoto Manabi+25
+2016-05-12,Event,Ecuador,Terremoto Manabi+26
+2016-05-13,Event,Ecuador,Terremoto Manabi+27
+2016-05-14,Event,Ecuador,Terremoto Manabi+28
+2016-05-15,Event,Ecuador,Terremoto Manabi+29
+2016-05-16,Event,Ecuador,Terremoto Manabi+30
+2016-05-24,Holiday,Ecuador,Batalla de Pichincha
+2016-05-27,Transfer,Ecuador,Traslado Batalla de Pichincha
+2016-08-10,Holiday,Ecuador,Primer Grito de Independencia
+2016-08-12,Transfer,Ecuador,Traslado Primer Grito de Independencia
+2016-10-09,Holiday,Ecuador,Independencia de Guayaquil
+2016-11-02,Holiday,Ecuador,Dia de Difuntos
+2016-11-03,Holiday,Ecuador,Independencia de Cuenca
+2016-11-04,Bridge,Ecuador,Puente Dia de Difuntos
+2016-11-12,Work Day,Ecuador,Recupero Puente Dia de Difuntos
+2016-11-25,Event,Ecuador,Black Friday
+2016-11-28,Event,Ecuador,Cyber Monday
+2016-12-21,Additional,Ecuador,Navidad-4
+2016-12-22,Additional,Ecuador,Navidad-3
+2016-12-23,Additional,Ecuador,Navidad-2
+2016-12-24,Additional,Ecuador,Navidad-1
+2016-12-25,Holiday,Ecuador,Navidad
+2016-12-26,Additional,Ecuador,Navidad+1
+2016-12-31,Additional,Ecuador,Primer dia del ano-1
+2017-01-01,Holiday,Ecuador,Primer dia del ano
+2017-01-02,Transfer,Ecuador,Traslado Primer dia del ano
+2017-02-27,Holiday,Ecuador,Carnaval
+2017-02-28,Holiday,Ecuador,Carnaval
+2017-04-14,Holiday,Ecuador,Viernes Santo
+2017-05-01,Holiday,Ecuador,Dia del Trabajo
+2017-05-13,Additional,Ecuador,Dia de la Madre-1
+2017-05-14,Event,Ecuador,Dia de la Madre
+2017-05-24,Holiday,Ecuador,Batalla de Pichincha
+2017-05-26,Transfer,Ecuador,Traslado Batalla de Pichincha
